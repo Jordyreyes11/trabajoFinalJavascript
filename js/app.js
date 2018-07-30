@@ -1,3 +1,6 @@
+
+// declaracion de variables
+var resultado = document.getElementById('display')
 var teclaon = document.getElementById('on');
 var teclasign = document.getElementById('sign');
 var teclaraiz = document.getElementById('raiz');
@@ -18,6 +21,7 @@ var teclapunto = document.getElementById('punto');
 var teclaigual = document.getElementById('igual');
 var teclamas = document.getElementById('mas');
 
+// Eventos
 // tecla On
 function cambiarTeclaOn(){
   teclaon.style.width="21%";
@@ -27,8 +31,11 @@ function volverTeclaOn(){
   teclaon.style.width="22%";
   teclaon.style.height="62.91px";
 };
-teclaon.onmousedown=cambiarTeclaOn;
-teclaon.onmouseup=volverTeclaOn;
+teclaon.onmousedown = cambiarTeclaOn;
+teclaon.onmouseup = volverTeclaOn;
+teclaon.onclick = function(e){
+  //resetear();
+}
 
 // tecla Sign
 function cambiarTeclaSign(){
@@ -77,6 +84,9 @@ function volverTecla7(){
 };
 tecla7.onmousedown=cambiarTecla7;
 tecla7.onmouseup=volverTecla7;
+tecla7.onclick = function(e){
+  resultado.textContent = resultado.textContent + "7";
+}
 
 // tecla 8
 function cambiarTecla8(){
@@ -89,6 +99,9 @@ function volverTecla8(){
 };
 tecla8.onmousedown=cambiarTecla8;
 tecla8.onmouseup=volverTecla8;
+tecla8.onclick=function(e){
+  resultado.textContent = resultado.textContent + 8;
+}
 
 // tecla 9
 function cambiarTecla9(){
@@ -101,6 +114,9 @@ function volverTecla9(){
 };
 tecla9.onmousedown=cambiarTecla9;
 tecla9.onmouseup=volverTecla9;
+tecla9.onclick = function(e){
+  resultado.textContent = resultado.textContent + 9;
+}
 
 // tecla por
 function cambiarTeclapor(){
@@ -125,6 +141,9 @@ function volverTecla4(){
 };
 tecla4.onmousedown=cambiarTecla4;
 tecla4.onmouseup=volverTecla4;
+tecla4.onclick = function(e){
+  resultado.textContent = resultado.textContent + "4";
+}
 
 // tecla 5
 function cambiarTecla5(){
@@ -137,6 +156,9 @@ function volverTecla5(){
 };
 tecla5.onmousedown=cambiarTecla5;
 tecla5.onmouseup=volverTecla5;
+tecla5.onclick = function(e){
+  resultado.textContent = resultado.textContent + "5";
+}
 
 // tecla 6
 function cambiarTecla6(){
@@ -149,6 +171,9 @@ function volverTecla6(){
 };
 tecla6.onmousedown=cambiarTecla6;
 tecla6.onmouseup=volverTecla6;
+tecla6.onclick = function(e){
+  resultado.textContent = resultado.textContent + "6";
+}
 
 // tecla menos
 function cambiarTeclamenos(){
@@ -173,6 +198,9 @@ function volverTecla1(){
 };
 tecla1.onmousedown=cambiarTecla1;
 tecla1.onmouseup=volverTecla1;
+tecla1.onclick = function(e){
+  resultado.textContent = resultado.textContent + "1";
+}
 
 // tecla 2
 function cambiarTecla2(){
@@ -185,6 +213,9 @@ function volverTecla2(){
 };
 tecla2.onmousedown=cambiarTecla2;
 tecla2.onmouseup=volverTecla2;
+tecla2.onclick = function(e){
+  resultado.textContent = resultado.textContent + "2";
+}
 
 // tecla 3
 function cambiarTecla3(){
@@ -197,6 +228,9 @@ function volverTecla3(){
 };
 tecla3.onmousedown=cambiarTecla3;
 tecla3.onmouseup=volverTecla3;
+tecla3.onclick = function(e){
+  resultado.textContent = resultado.textContent + "3";
+}
 
 // tecla 0
 function cambiarTecla0(){
@@ -209,6 +243,9 @@ function volverTecla0(){
 };
 tecla0.onmousedown=cambiarTecla0;
 tecla0.onmouseup=volverTecla0;
+tecla0.onclick = function(e){
+  resultado.textContent = resultado.textContent + "0"
+}
 
 // tecla punto
 function cambiarTeclapunto(){
@@ -221,6 +258,9 @@ function volverTeclapunto(){
 };
 teclapunto.onmousedown=cambiarTeclapunto;
 teclapunto.onmouseup=volverTeclapunto;
+teclapunto.onclick = function(e){
+  resultado.textContent = resultado.textContent +".";
+}
 
 // tecla igual
 function cambiarTeclaigual(){
@@ -245,3 +285,6 @@ function volverTeclamas(){
 };
 teclamas.onmousedown=cambiarTeclamas;
 teclamas.onmouseup=volverTeclamas;
+teclamas.onclick = function(e){
+
+}
