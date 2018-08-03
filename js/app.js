@@ -1,5 +1,8 @@
 
 // declaracion de variables
+var operandoa;
+var operandob;
+var operacion;
 var resultado = document.getElementById('display')
 var teclaon = document.getElementById('on');
 var teclasign = document.getElementById('sign');
@@ -34,7 +37,7 @@ function volverTeclaOn(){
 teclaon.onmousedown = cambiarTeclaOn;
 teclaon.onmouseup = volverTeclaOn;
 teclaon.onclick = function(e){
-  //resetear();
+  resetear();
 }
 
 // tecla Sign
@@ -72,6 +75,11 @@ function volverTecladividido(){
 };
 tecladividido.onmousedown=cambiarTecladividido;
 tecladividido.onmouseup=volverTecladividido;
+tecladividido.onclick = function(e){
+  operandoa = resultado.textContent;
+  operacion = "/";
+  limpiar();
+}
 
 // tecla 7
 function cambiarTecla7(){
@@ -129,6 +137,11 @@ function volverTeclapor(){
 };
 teclapor.onmousedown=cambiarTeclapor;
 teclapor.onmouseup=volverTeclapor;
+teclapor.onclick = function(e){
+  operandoa = resultado.textContent;
+  operacion = "*";
+  limpiar();
+}
 
 // tecla 4
 function cambiarTecla4(){
@@ -186,6 +199,11 @@ function volverTeclamenos(){
 };
 teclamenos.onmousedown=cambiarTeclamenos;
 teclamenos.onmouseup=volverTeclamenos;
+teclamenos.onclick = function(e){
+  operandoa = resultado.textContent;
+  operacion = "-";
+  limpiar();
+}
 
 // tecla 1
 function cambiarTecla1(){
@@ -273,6 +291,10 @@ function volverTeclaigual(){
 };
 teclaigual.onmousedown=cambiarTeclaigual;
 teclaigual.onmouseup=volverTeclaigual;
+teclaigual.onclick = function(e){
+  operandob = resultado.textContent;
+  resolver();
+}
 
 // tecla mas
 function cambiarTeclamas(){
@@ -286,5 +308,35 @@ function volverTeclamas(){
 teclamas.onmousedown=cambiarTeclamas;
 teclamas.onmouseup=volverTeclamas;
 teclamas.onclick = function(e){
-
+  operandoa = resultado.textContent;
+  operacion = "+";
+  limpiar();
+}
+function limpiar(){
+  resultado.textContent = "";
+}
+function resetear(){
+  resultado.textContent = "0";
+  operandoa = 0;
+  operandob = 0;
+  operacion = "";
+}
+function resolver(){
+  var res = 0;
+  switch (operacion) {
+    case "+":
+      res = operandoa + operandob;
+      break;
+    case "-":
+      res = operandoa - operandob;
+      break;
+    case "*":
+      res = operandoa * operandob;
+      break;
+    case "/":
+      res = operandoa / operandob;
+      break;
+  }
+  resetear();
+  resultado.textContent = res;
 }
