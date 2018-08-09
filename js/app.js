@@ -93,7 +93,9 @@ function volverTecla7(){
 tecla7.onmousedown=cambiarTecla7;
 tecla7.onmouseup=volverTecla7;
 tecla7.onclick = function(e){
-  resultado.textContent = resultado.textContent + "7";
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + "7";
+  }
 }
 
 // tecla 8
@@ -108,7 +110,9 @@ function volverTecla8(){
 tecla8.onmousedown=cambiarTecla8;
 tecla8.onmouseup=volverTecla8;
 tecla8.onclick=function(e){
-  resultado.textContent = resultado.textContent + 8;
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + 8;
+  }
 }
 
 // tecla 9
@@ -123,7 +127,9 @@ function volverTecla9(){
 tecla9.onmousedown=cambiarTecla9;
 tecla9.onmouseup=volverTecla9;
 tecla9.onclick = function(e){
-  resultado.textContent = resultado.textContent + 9;
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + 9;
+  }
 }
 
 // tecla por
@@ -155,7 +161,9 @@ function volverTecla4(){
 tecla4.onmousedown=cambiarTecla4;
 tecla4.onmouseup=volverTecla4;
 tecla4.onclick = function(e){
-  resultado.textContent = resultado.textContent + "4";
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + "4";
+  }
 }
 
 // tecla 5
@@ -170,7 +178,9 @@ function volverTecla5(){
 tecla5.onmousedown=cambiarTecla5;
 tecla5.onmouseup=volverTecla5;
 tecla5.onclick = function(e){
-  resultado.textContent = resultado.textContent + "5";
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + "5";
+  }
 }
 
 // tecla 6
@@ -185,7 +195,9 @@ function volverTecla6(){
 tecla6.onmousedown=cambiarTecla6;
 tecla6.onmouseup=volverTecla6;
 tecla6.onclick = function(e){
-  resultado.textContent = resultado.textContent + "6";
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + "6";
+  }
 }
 
 // tecla menos
@@ -217,7 +229,9 @@ function volverTecla1(){
 tecla1.onmousedown=cambiarTecla1;
 tecla1.onmouseup=volverTecla1;
 tecla1.onclick = function(e){
-  resultado.textContent = resultado.textContent + "1";
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + "1";
+  }
 }
 
 // tecla 2
@@ -232,7 +246,9 @@ function volverTecla2(){
 tecla2.onmousedown=cambiarTecla2;
 tecla2.onmouseup=volverTecla2;
 tecla2.onclick = function(e){
-  resultado.textContent = resultado.textContent + "2";
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + "2";
+  }
 }
 
 // tecla 3
@@ -247,7 +263,9 @@ function volverTecla3(){
 tecla3.onmousedown=cambiarTecla3;
 tecla3.onmouseup=volverTecla3;
 tecla3.onclick = function(e){
-  resultado.textContent = resultado.textContent + "3";
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + "3";
+  }
 }
 
 // tecla 0
@@ -262,7 +280,9 @@ function volverTecla0(){
 tecla0.onmousedown=cambiarTecla0;
 tecla0.onmouseup=volverTecla0;
 tecla0.onclick = function(e){
-  resultado.textContent = resultado.textContent + "0"
+  if(resultado.textContent.length < 8){
+    resultado.textContent = resultado.textContent + "0";
+  }
 }
 
 // tecla punto
@@ -325,7 +345,7 @@ function resolver(){
   var res = 0;
   switch (operacion) {
     case "+":
-      res = operandoa + operandob;
+      res = parseFloat(operandoa) + parseFloat(operandob);
       break;
     case "-":
       res = operandoa - operandob;
