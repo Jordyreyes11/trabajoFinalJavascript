@@ -358,5 +358,7 @@ function resolver(){
       break;
   }
   resetear();
+  res = ""+res;
+  res = res.substring(0, 8);
   resultado.textContent = res;
 }
